@@ -1,0 +1,352 @@
+/*---------------------------------- OVERALL LAYOUT -------------------------------------------------*/
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Pixelify Sans", sans-serif, Helvetica;
+  color: black;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: auto 120px 140px 140px 140px 140px 160px auto;
+  grid-template-columns: auto 200px 140px 140px 140px 140px 200px auto;
+  gap: 3px;
+  /*adjust width and height afterwards   */
+}
+
+#background {
+  height: 100vh;
+  width: auto;
+  background-image: url("images/wood-background.png");
+  /* <a href="https://www.freepik.com/free-vector/wood-vector-texture-template-pattern-seamless-material-hardwood-floor-natural-light-parquet-vector-illustration_11059494.htm#fromView=search&page=1&position=1&uuid=57f0cdb6-5a75-4fdf-ae16-c4fd3686ad56">Image by macrovector on Freepik</a> */
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/*---------------------------------- HEADER  -------------------------------------------------*/
+
+#header {
+  display: inline-flex;
+  grid-column: 3/7;
+  grid-row: 2/3;
+  justify-content: space-around;
+  align-items: center;
+  /* remove borders afterwards */
+}
+
+#header p {
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+  text-shadow: 5px 5px lightcoral;
+}
+
+#main {
+  grid-column: 3/7;
+  grid-row: 3/7;
+  /* remove borders afterwards */
+}
+
+/*---------------------------------- SETTINGS (DEFAULT PAGE) -------------------------------------------------*/
+#settings {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 140px 140px 140px 140px;
+  align-items: center;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+#board-setting {
+  display: flex;
+  grid-row: 1/2;
+  font-weight: normal;
+}
+
+#format-setting {
+  display: flex;
+  grid-row: 2/3;
+  font-weight: normal;
+}
+
+#player-setting {
+  display: flex;
+  grid-row: 3/4;
+  font-weight: normal;
+}
+#start {
+  display: flex;
+  justify-content: center;
+  grid-column: 1/4;
+  grid-row: 4/5;
+  font-weight: normal;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+}
+
+.settings {
+  background-color: grey;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 8px;
+  box-shadow: 1px 1px black;
+  transition-duration: 0.5s;
+}
+
+.selected {
+  background-color: #04aa6d;
+}
+
+.settings:hover {
+  background-color: #04aa6d;
+  cursor: pointer;
+}
+
+#black-name {
+  font-size: 18px;
+  border-radius: 12px;
+  width: 100px;
+  background: transparent;
+}
+
+#white-name {
+  font-size: 18px;
+  border-radius: 12px;
+  width: 100px;
+  background: transparent;
+}
+
+/*---------------------------------- RULES  -------------------------------------------------*/
+#rules {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  font-size: 17px;
+  font-weight: normal;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#returnButton {
+  width: 250px;
+}
+/*---------------------------------- BOARD  -------------------------------------------------*/
+
+#board {
+  display: none;
+  margin: 5px;
+  z-index: 1;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.cell-15 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  gap: 0;
+}
+
+.cell-15:hover {
+  cursor: pointer;
+}
+
+.cell-19 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 28.9px;
+  height: 28.9px;
+  gap: 0;
+}
+
+.cell-19:hover {
+  cursor: pointer;
+}
+
+.piece-15 {
+  height: 33px;
+  width: 33px;
+}
+
+.piece-19 {
+  height: 26px;
+  width: 26px;
+}
+
+.corner-tl {
+  background-image: url("images/corner.png");
+  background-size: 100% 100%;
+  transform: rotate(90deg);
+}
+
+.corner-tr {
+  background-image: url("images/corner.png");
+  background-size: 100% 100%;
+  transform: rotate(180deg);
+}
+
+.corner-bl {
+  background-image: url("images/corner.png");
+  background-size: 100% 100%;
+}
+
+.corner-br {
+  background-image: url("images/corner.png");
+  background-size: 100% 100%;
+  transform: rotate(-90deg);
+}
+
+.left-edge {
+  background-image: url("images/edge.png");
+  background-size: 100% 100%;
+}
+
+.right-edge {
+  background-image: url("images/edge.png");
+  background-size: 100% 100%;
+  transform: rotate(180deg);
+}
+
+.top-edge {
+  background-image: url("images/edge.png");
+  background-size: 100% 100%;
+  transform: rotate(90deg);
+}
+
+.bottom-edge {
+  background-image: url("images/edge.png");
+  background-size: 100% 100%;
+  transform: rotate(-90deg);
+}
+
+.centre-board {
+  background-image: url("images/crosshair.png");
+  background-size: 100% 100%;
+}
+
+/*---------------------------------- SIDE BARS  -------------------------------------------------*/
+
+#sidebar-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  grid-column: 2/3;
+  grid-row: 3/7;
+  font-size: 30px;
+}
+
+#sidebar-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  grid-column: 7/8;
+  grid-row: 3/7;
+  font-size: 30px;
+  color: white;
+}
+
+/*---------------------------------- NAVIGATION -------------------------------------------------*/
+
+#navigation {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  grid-column: 2/3;
+  grid-row: 7/8;
+}
+
+.nav-button {
+  background-color: grey;
+  color: white;
+  border-radius: 10px;
+  font-size: 22px;
+  padding: 8px;
+  box-shadow: 1px 1px black;
+  transition-duration: 0.5s;
+}
+
+.nav-button:hover {
+  background-color: #04aa6d;
+  cursor: pointer;
+}
+
+/*---------------------------------- FOOTER  -------------------------------------------------*/
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  gap: 5px;
+  grid-column: 3/7;
+  grid-row: 7/8;
+}
+
+#footer p {
+  color: #505050;
+  font-size: 28px;
+  text-shadow: 2px 2px salmon;
+  margin: 0px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#decisions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.decision {
+  background-color: #84391b;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px;
+  box-shadow: 1px 1px black;
+  transition-duration: 0.5s;
+}
+
+.decision:hover {
+  background-color: #04aa6d;
+  cursor: pointer;
+}
+
+/*---------------------------------- CREDITS -------------------------------------------------*/
+
+#credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  grid-column: 7/8;
+  grid-row: 7/8;
+  text-align: center;
+}

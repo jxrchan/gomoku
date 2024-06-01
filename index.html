@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+    <div id = "background"> 
+      <div id="container">
+        <div id="header"><img src ="images/black-piece.png" style="width: 30px; height:30px;"> 
+            <p>GOMOKU - CONNECT FIVE</p> 
+            <img src = "images/white-piece.png" style="width: 30px; height:30px;"/></div>
+        <div id="main">
+            <div id ="settings">
+                <div id="board-setting"> BOARD SIZE </div>
+                <div class="options"> <button id="15-button" class="settings">  15X15 </button> </div>
+                <div class="options"> <button id="19-button" class="settings"> 19X19 </button> </div>
+
+                <div id="format-setting"> GAME RULES </div>
+                <div class="options"> <button id="freebutton" class="settings"> FREE PLAY </button>  </div>
+                <div class="options"><button id="tournbutton" class="settings"> TOURNAMENT </button> </div>
+                    
+                    
+                <div id-="player-setting"> PLAYERS' NAMES </div>
+                <div class="options"> <input type ="text" id="black-name" minlength="1" maxlength="15" placeholder="BLACK" />  </div>
+                <div class="options"> <input type ="text" id="white-name" minlength="1" maxlength="15" placeholder="WHITE" />  </div>
+                    
+                <div id="start"> 
+                    <button id="startbutton" class="settings"> START GAME </button>
+                </div>
+            </div>
+            <div id ="rules">
+                <p> Gomoku is easy to play. Players take turns to place black and white pieces on a grid board. Black always starts first. 
+                    To win, place 5 pieces of the same colour in a row. These pieces can be horizontal, vertical, or diagonal. That's it!
+                </p>
+                <p> <b>Board Size: </b> <br/> Choose between playing on a 15 by 15 grid or 19 by 19 board </p>
+                <p> <b>Game Rules:</b><br/> In Free play, players simply take turns to put their pieces on any grid throughout the game
+                <br/> In Tournament, the black player starts off by placing 2 black pieces and 1 white piece. The white player, then,
+           chooses to either; <br/><em>1. Continue as white </em> <br/> <em> 2. Swap to black </em> <br/> <em>3. Place 1 white and 1 black piece and let black
+         decide to continue or swap </em> </p> <br/> <br/>
+         <button id="returnButton" class="settings"> RETURN </button>
+            </div>
+            <div id ="board"></div>
+        </div>
+        <div id="sidebar-1">
+            <!-- <p style="color: white; border: 8px solid black; background-color: black; border-radius: 12px;  ">BLACK</p> -->
+        </div>
+        <div id="sidebar-2">
+            <!-- <p style="color: black; border: 8px solid white; background-color: white; border-radius: 12px; ">WHITE</p> -->
+        </div>
+        <div id="navigation">
+          <button id = "rulesButton" class="nav-button">RULES</button>
+          <button id = "restartButton" class="nav-button">RESTART</button>
+        </div>
+        <div id="footer"><p></p> 
+            <div id="decisions"> </div>
+        </div>
+        <div id="credits">made by jxrchan<br/>
+        Version 1.0 </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
