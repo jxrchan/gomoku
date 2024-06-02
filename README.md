@@ -41,15 +41,14 @@ That being said, some argue that having a bigger board allows for more complex a
 
 **Format:**
 
-Free play or freestyle Gomoku simply involves the black and white player taking turns, from the beginning of the game and with no variation throughout. Players are free to put their pieces on any unoccupied intersection during the game. This is the most casual and no-frills form of the game.
+Free play or freestyle Gomoku simply involves the black and white player taking turns, from the beginning of the game and with no variation throughout. Players are free to put their pieces on any unoccupied intersection. This is the most casual and no-frills form of the game.
 
-Tournament gomoku addresses the inherent advantage the black player has for starting the game. In 2009, the Swap2 protocol became the gold standard equalising mechanism by which the game becomes balanced for White. This has been programmed into the extant game. Black and white players start off as tentative. Black places two black and one white piece to begin. White, now has three options:
-
+Tournament gomoku addresses the inherent advantage the black player has for starting the game. In 2009, the Swap2 protocol became the gold standard mechanism for Gomoku competitions by which the game takes away the black player's advantage. This protocol has been programmed into the extant game. Black and white players start off as tentative. Black places two black and one white piece to begin. White, now has three options:
 1. Remain as White and place a second white stone
 2. Swap their color and play as Black
 3. Play one black and one white piece, and defer the choice of which color to play back to Black.
 
-The unpredictability of White's initial decision makes it impossible for Black to study and predict different lines of attack.
+The unpredictability of the White's initial decision makes it impossible for Black to study and predict different lines of attack.
 
 ## Credits & Attributions:
 
